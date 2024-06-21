@@ -1,0 +1,48 @@
+.card {
+    background-color: #181818; /* Dark card background */
+    border: none;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    height: 380px;
+    position: relative;
+    text-align: center;
+    color: #ffffff; /* Light text color */
+    overflow: hidden; /* Ensures no overflow */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.2s ease;
+   
+    h3 {
+        margin-top: 0;
+    }
+    p {
+        margin: 10px 0;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures cover fits well */    
+    }
+
+    .delete-button {
+        position: absolute; 
+        bottom: 10px; 
+        right: 10px; 
+        background-color: #B900FF;
+        margin-bottom: 8px;
+        &:hover {
+            background-color: #71019B;
+        }
+
+    }
+}
+
+.upvote-button {
+    position: absolute; 
+    bottom: 10px; 
+    left: 10px; 
+    background-color: #333;
+    margin-bottom: 8px;
+    &:hover {
+        background-color: #555;
+    }
+}
