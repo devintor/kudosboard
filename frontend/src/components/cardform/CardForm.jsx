@@ -51,7 +51,7 @@ const CardForm = ({ boardId, onSuccess, onClose }) => {
         return;
       }
       const response = await axios.post(
-        `https://site-kudos-board-backend-exemplar.onrender.com/boards/${boardId}/cards`,
+        `http://localhost:3000/boards/${boardId}/cards`,
         {
           title,
           description,
@@ -86,7 +86,7 @@ const CardForm = ({ boardId, onSuccess, onClose }) => {
         {gifOptions.length > 0 && (
           <div className="gif-options">
             {gifOptions.map((gifUrl) => (
-              <div className="gif-container">
+              <div className="gif-container" key={gifUrl}>
                 <img
                   className="gif"
                   key={gifUrl}

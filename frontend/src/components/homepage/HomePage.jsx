@@ -18,7 +18,7 @@ const HomePage = () => {
 
   const fetchBoards = async () => {
     try {
-      const response = await axios.get("https://site-kudos-board-backend-exemplar.onrender.com/boards");
+      const response = await axios.get("http://localhost:3000/boards");
       setBoards(response.data.boards);
     } catch (error) {
       console.error("Error fetching boards:", error);
@@ -34,14 +34,15 @@ const HomePage = () => {
       );
     }
 
-    if (filteredCategory === "Recent") {
-      filteredBoards.sort((a, b) => {
-        const dateA = a.createdAt ? new Date(a.createdAt.replace(/\s/, "T")) : new Date(0);
-        const dateB = b.createdAt ? new Date(b.createdAt.replace(/\s/, "T")) : new Date(0);
+    // if (filteredCategory === "Recent") {
+    //   filteredBoards.sort((a, b) => {
+    //     const dateA = a.createdAt ? new Date(a.createdAt.replace(/\s/, "T")) : new Date(0);
+    //     const dateB = b.createdAt ? new Date(b.createdAt.replace(/\s/, "T")) : new Date(0);
 
-        return dateB - dateA;
-      });
-    } else if (filteredCategory) {
+    //     return dateB - dateA;
+    //   });
+    // } else 
+    if (filteredCategory) {
       filteredBoards = filteredBoards.filter(
         (board) => board.category === filteredCategory
       );
@@ -80,7 +81,7 @@ const HomePage = () => {
 
   const deleteBoard = async (boardId) => {
     try {
-      const response = await fetch(`https://site-kudos-board-backend-exemplar.onrender.com/boards/${boardId}`, {
+      const response = await fetch(`http://localhost:3000/boards/${boardId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

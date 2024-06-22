@@ -9,6 +9,7 @@ import "./BoardPage.css";
 
 const BoardPage = () => {
   const { boardId } = useParams();
+
   const [boardTitle, setBoardTitle] = useState("");
   const [cards, setCards] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -21,7 +22,7 @@ const BoardPage = () => {
   const fetchCards = async () => {
     try {
       const response = await axios.get(
-        `https://site-kudos-board-backend-exemplar.onrender.com/boards/${boardId}/cards`
+        `http://localhost:3000/boards/${boardId}`
       );
       setCards(response.data.cards);
     } catch (error) {
@@ -32,9 +33,9 @@ const BoardPage = () => {
   const fetchBoardData = async () => {
     try {
       const response = await axios.get(
-        `https://site-kudos-board-backend-exemplar.onrender.com/boards/${boardId}`
+        `http://localhost:3000/boards/${boardId}`
       );
-      const title = response.data.board.title;
+      const title = response.data.title;
       setBoardTitle(title);
     } catch (error) {
       console.error("Error fetching board data:", error);
@@ -44,7 +45,7 @@ const BoardPage = () => {
   const handleDelete = async (cardId) => {
     try {
       await axios.delete(
-        `https://site-kudos-board-backend-exemplar.onrender.com/boards/${boardId}/cards/${cardId}`
+        `http://localhost:3000/boards/${boardId}/cards/${cardId}`
       );
       fetchCards();
     } catch (error) {
