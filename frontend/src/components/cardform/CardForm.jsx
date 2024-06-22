@@ -86,7 +86,7 @@ const CardForm = ({ boardId, onSuccess, onClose }) => {
         {gifOptions.length > 0 && (
           <div className="gif-options">
             {gifOptions.map((gifUrl) => (
-              <div className="gif-container">
+              <div className="gif-container" key={gifUrl}>
                 <img
                   className="gif"
                   key={gifUrl}

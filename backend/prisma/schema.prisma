@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Board {
-  id          Int @id @default(autoincrement())
+  board_id    Int @id @default(autoincrement())
   title       String
   category    String?
   owner       String?
@@ -22,12 +22,12 @@ model Board {
   cards       Card[]
 }
 model Card {
-  id          Int @id @default(autoincrement())
+  card_id     Int @id @default(autoincrement())
   title       String
   description String
   gif         String
   owner       String?
   votes       Int @default(0)
-  boardId     Int
-  board       Board @relation(fields: [boardId], references: [id])
+  board_id    Int
+  board       Board @relation(fields: [board_id], references: [board_id])
 }
