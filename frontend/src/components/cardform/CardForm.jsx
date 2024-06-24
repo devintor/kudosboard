@@ -51,7 +51,7 @@ const CardForm = ({ boardId, onSuccess, onClose }) => {
         return;
       }
       const response = await axios.post(
-        `http://localhost:3000/boards/${boardId}/cards`,
+        `https://kudosboard-slb3.onrender.com/boards/${boardId}/cards`,
         {
           title,
           description,
