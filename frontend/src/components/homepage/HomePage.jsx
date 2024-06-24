@@ -34,14 +34,14 @@ const HomePage = () => {
       );
     }
 
-    // if (filteredCategory === "Recent") {
-    //   filteredBoards.sort((a, b) => {
-    //     const dateA = a.createdAt ? new Date(a.createdAt.replace(/\s/, "T")) : new Date(0);
-    //     const dateB = b.createdAt ? new Date(b.createdAt.replace(/\s/, "T")) : new Date(0);
+    if (filteredCategory === "Recent") {
+      filteredBoards.sort((a, b) => {
+        const dateA = a.createdAt ? new Date(a.createdAt.replace(/\s/, "T")) : new Date(0);
+        const dateB = b.createdAt ? new Date(b.createdAt.replace(/\s/, "T")) : new Date(0);
 
-    //     return dateB - dateA;
-    //   });
-    // } else 
+        return dateB - dateA;
+      });
+    } else 
     if (filteredCategory) {
       filteredBoards = filteredBoards.filter(
         (board) => board.category === filteredCategory
