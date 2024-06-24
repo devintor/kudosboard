@@ -22,7 +22,7 @@ const BoardPage = () => {
   const fetchCards = async () => {
     try {
       const response = await axios.get(
-        `ç/boards/${boardId}`
+        `https://kudosboard-slb3.onrender.com/boards/${boardId}`
       );
       setCards(response.data.cards);
     } catch (error) {
