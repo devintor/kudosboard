@@ -22,7 +22,7 @@ const BoardPage = () => {
   const fetchCards = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/boards/${boardId}`
+        `ç/boards/${boardId}`
       );
       setCards(response.data.cards);
     } catch (error) {
@@ -33,7 +33,7 @@ const BoardPage = () => {
   const fetchBoardData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/boards/${boardId}`
+        `https://kudosboard-slb3.onrender.com/boards/${boardId}`
       );
       const title = response.data.title;
       setBoardTitle(title);
@@ -45,7 +45,7 @@ const BoardPage = () => {
   const handleDelete = async (cardId) => {
     try {
       await axios.delete(
-        `http://localhost:3000/boards/${boardId}/cards/${cardId}`
+        `https://kudosboard-slb3.onrender.com/boards/${boardId}/cards/${cardId}`
       );
       fetchCards();
     } catch (error) {
