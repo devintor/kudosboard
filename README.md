@@ -2,7 +2,7 @@
 
 Submitted by: **Devin Torres**
 
-Deployed Application (optional): [Kudos Board Deployed Site](ADD_LINK_HERE)
+<!-- Deployed Application (optional): [Kudos Board Deployed Site](ADD_LINK_HERE) -->
 
 ### Application Features
 
