@@ -40,8 +40,8 @@ Submitted by: **Devin Torres**
     - [ ]  Anonymous cards or cards by guest users should still be allowed.
   - [ ] Add a new filter option on the home page to display only the current user's boards.
   - [ ] Allow boards to be deleted only if they are owned by the user.
-- [ ] **Deployment**
-  - [ ] Website is deployed via Render.
+- [x] **Deployment**
+  - [x] Website is deployed via Render.
 - [ ] **Comments**
   - [ ] Users should be able to comment on cards.
 
@@ -49,6 +49,9 @@ Submitted by: **Devin Torres**
 ### Walkthrough Video
 
 [https://drive.google.com/file/d/1BFwIXt26y9GoPW50W_c9_KmvH-DR9onJ/view?usp=sharing](url)
+
+search bar functionality
+[https://drive.google.com/file/d/1jekuHF7ECKRQ9NSjXwZoph-lg7EF2qu_/view?usp=sharing](url)
 
 ### Reflection
 
