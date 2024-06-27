@@ -61,11 +61,11 @@ I felt unprepared to define all of the routes and CRUD functions.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-I currently am using the sample's backend, because I could not successfully integrate my own. I plan to fix this by the end of the night, or at least at some point tomorrow.
+I would have tried to implement the user authentication, but it just seemed incredibly overwhelming as a feature that I did not look at until the last day.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-We did not yet demo our projects.
+I was very proud of my styling, which has been a general trend. I noticed that many of my peers opted to use the same styling of the provided sample site, so I was satisfied with the uniqueness of my site. One thing that I noticed and later implemented was that the Recent category was not meant to be filter but rather a simple sort. I was originally including it in the list of categories when creating a new board, but removed after noticing this in Emmanuel's project.
 
 ### Open-source libraries used
 
